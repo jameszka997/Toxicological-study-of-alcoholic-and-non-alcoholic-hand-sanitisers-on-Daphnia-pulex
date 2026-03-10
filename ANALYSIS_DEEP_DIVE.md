@@ -70,6 +70,10 @@ Ratio Test (ecotox) → Compare ABHS vs NABHS LC50 values
 
 ### Results
 
+<img width="406" height="552" alt="image" src="https://github.com/user-attachments/assets/68ace6e9-798d-4371-970b-ba69e4a4e999" />
+
+*Proportional mortality of D. pulex over a 48-hour acute toxicity test when exposed to non-alcohol-based hand sanitiser (NABHS) (A.) and alcohol-based hand sanitiser (ABHS) (B.) with fitted concentration-response curves*
+
 **NABHS (BAC)** — Clean, interpretable results:
 - Mortality increased consistently with concentration (8% → 12% → 4% → 52% → 96%)
 - LC₅₀ = **164 μg/L** (95% CI: 114–261 μg/L)
@@ -114,6 +118,11 @@ Kaplan–Meier survival curves (survival package)
 ```
 
 ### Results
+
+<img width="375" height="530" alt="image" src="https://github.com/user-attachments/assets/e4d71dba-2020-4962-8deb-5194e0719611" />
+
+*Proportional mortality of D. pulex over a 14-day chronic toxicity test when exposed to NABHS (A.) and ABHS (B.) with fitted concentration-response curves*
+
 
 **LC values from chronic tests:**
 
@@ -174,6 +183,11 @@ A **Kruskal-Wallis** (non-parametric) test was used for ABHS concentration group
 
 ### Results
 
+<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/68b37cbf-e46e-4388-969f-df7303de6aeb" />
+
+*Distribution of the heart rate differences (%) for each test concentration group of ABHS (v/v%) and NABHS (μg/L). Difference between the concentrations of ABHS is not significant (p>0.05), and difference between the concentrations of NABHS is not significant (p>0.05)*
+
+
 | Test | Result |
 |------|--------|
 | Paired t-test (ABHS before vs after) | Not significant (t=−0.588, df=89.8, p=0.558) |
@@ -225,6 +239,12 @@ In this study, the ABHS data produced a **flat, non-sigmoid curve** — the clea
 ### Problem 1: Alcohol Evaporation Destabilising ABHS Concentrations
 
 **What happened:**
+
+<img width="1079" height="135" alt="image" src="https://github.com/user-attachments/assets/1f9de142-988c-4091-a3dc-c269431e4c26" />
+
+*Percentage proportional mortality and concentrations of ABHS used in the range-finding test and acute toxicity tests *
+
+
 The ABHS acute toxicity test was repeated **four times** (one range-finder + three full repeats). Across tests, the mortality response at identical concentrations varied wildly and non-monotonically — sometimes higher concentrations caused *less* mortality than lower ones. This made LC₅₀ calculation unreliable and the concentration-response curve non-sigmoid.
 
 **Root Cause:**
@@ -249,6 +269,8 @@ Szabo & Mandrekar (2008) suggest placing an open beaker containing a higher-conc
 
 **What happened:**
 In the chronic toxicity test, NABHS survival was paradoxically **highest at mid-range concentrations** (C3: 2.4 μg/L and C4: 1.2 μg/L) rather than at the lowest concentrations as expected. This produced a highly irregular survival pattern that undermined the dose-response logic.
+
+
 
 **Root Cause:**
 The primary driver was **specimen age variability**. OECD (2004) guidelines recommend using specimens less than 24 hours old for toxicity tests to standardise sensitivity. Due to strict COVID-19 time constraints that extended set-up procedures, specimens were selected from mass cultures **without regard to age**. Older specimens would naturally be more prone to early-study mortality (particularly in the first 5 days), and this variation in background mortality — not driven by the toxicant — introduced noise into the dose-response relationship. This explains the pronounced **Day 5 mortality drop** visible across all concentration groups in both sanitisers.
@@ -278,41 +300,21 @@ Ethanol is known to cause **aggressive oxygen depletion** in freshwater when pre
 **What happened:**
 During acute and chronic toxicity tests, multiple specimens were observed to develop a **brown discolouration of the carapace**, losing their characteristic transparency. The discolouration was not permanent — it reversed after moulting events — and did not appear to physically impair specimen movement or behaviour.
 
+<img width="538" height="383" alt="image" src="https://github.com/user-attachments/assets/69e668b3-186a-47ef-9eab-64506c62a8be" />
+
+*Healthy and transparent D. pulex carapace taken before the commencement of an acute toxicity test*
+
+<img width="399" height="381" alt="image" src="https://github.com/user-attachments/assets/43ef37d1-a913-4022-a1fc-df48cf7085f9" />
+
+*Dark brown coloured carapace taken after the conclusion of the chronic toxicity test*
+
+
 **Root Cause (Hypothesised):**
 Because the discolouration appeared in specimens from both ABHS and NABHS test groups, the control group, *and* the untested mass cultures, it could not be attributed to either test substance. The working hypothesis is a **calcium-related carapace thickening**, as calcium is a critical resource in daphnid exoskeleton formation and carapace development (Goodberry, 2013). Artificial EPA medium may have a different calcium profile compared to natural pond water, potentially triggering an exoskeletal response. No literature was found to directly confirm or refute this hypothesis.
 
 This observation was documented but not analysed statistically, as no study existed to provide an analytical framework for this phenomenon.
 
----
 
-### Problem 5: BAC Alkyl Chain Length Unknown
-
-**What happened:**
-The Dettol product used as the NABHS source did not disclose the specific **alkyl chain length** of its benzalkonium chloride (BAC) content — whether C12, C14, or C16. This information is routinely disclosed in published toxicity studies (Kim et al., 2020; Lavorgna et al., 2016) because chain length affects BAC sorption rates to materials in solution, which in turn alters the effective bioavailable concentration experienced by test organisms.
-
-**Impact:**
-The acute LC₅₀ for NABHS calculated in this study (164 μg/L) was notably higher than values reported by Lavorgna et al. (2016) at 38 μg/L and Kim et al. (2020) at 41.1 μg/L. The unknown alkyl chain length — alongside specimen age variability and differences in dilution solvent (EPA here vs. dimethyl sulfoxide in Kim et al.) — is one of the likely contributing factors to this discrepancy.
-
----
-
-## Key Findings Summary
-
-| Finding | ABHS (Ethanol) | NABHS (BAC) |
-|---------|----------------|-------------|
-| **Acute LC₅₀** | 0.406 v/v% *(unreliable — non-sigmoid)* | 164 μg/L *(reliable)* |
-| **Chronic LC₅₀** | 0.0454 v/v% *(no CI calculable)* | 7.61 μg/L *(no CI calculable)* |
-| **MATC (Acute)** | 0.0406 v/v% | 16.4 μg/L |
-| **MATC (Chronic)** | 0.00454 v/v% | 0.761 μg/L |
-| **Heart Rate Effect** | Non-significant (p=0.558) | Non-significant (p=0.190) |
-| **Dose-response quality** | Poor — non-sigmoid, evaporation artefacts | Moderate — irregular chronic, clean acute |
-| **Environmental hazard** | Lower — biodegrades rapidly; indirect O₂ depletion risk | Higher — persistent, bioaccumulates, broader ecotoxicity |
-
-**Compared to literature BAC values in natural environments:**
-- Typical BAC in surface waters: ~0.1–1 μg/L
-- Maximum measured in civilian freshwaters: ~99.6 μg/L (Poland)
-- Hospital effluents: up to 2,800 μg/L (Austria)
-
-The NABHS MATC values of 0.761 μg/L (chronic) overlap with concentrations measurable in real freshwater systems, suggesting genuine environmental risk at elevated exposure scenarios such as near hospital effluent discharge.
 
 ---
 
