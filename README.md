@@ -7,8 +7,12 @@
 
 This repository aims to detail the results and analysis methodology of my bachelor’s thesis project, which investigated the toxicological effects of **alcohol-based (ABHS)** and **non‑alcohol‑based hand sanitisers (NABHS)** on *Daphnia pulex*, a key freshwater indicator species.
 
-Reason for the study project: With increased sanitizer use during and after the COVID‑19 pandemic, large amounts of these chemicals now enter freshwater systems. Despite this, little is known about their potential environmental impacts.  
+Reason for the study project: With increased sanitizer use during the COVID‑19 pandemic, large amounts of these chemicals now enter freshwater systems. Despite this, little is known about their potential environmental impacts.  
 This project provides laboratory-based toxicological benchmarks and identifies methodological challenges such as **alcohol evaporation**, which can distort exposure concentrations in ecotoxicology studies.
+
+Study was conducted between January and April of 2021.
+
+For a more detailed dive into the analytical methods, challenges and findings, [follow here](https://github.com/jameszka997/Toxicological-study-of-alcoholic-and-non-alcoholic-hand-sanitisers-on-Daphnia-pulex/blob/main/ANALYSIS_DEEP_DIVE.md)
 
 ---
 
@@ -26,6 +30,7 @@ This project provides laboratory-based toxicological benchmarks and identifies m
 
 ## Data Analysis Workflow
 
+**Acut & Chronic Toxicity study Workflow**
 ```mermaid
 flowchart LR;
 A(["Data Collection"]) --> B;
@@ -40,6 +45,16 @@ F --> G(["Final report"])
 
 
 
+**Heart Rate Analysis Workflow**
+```mermaid
+flowchart LR;
+A(["Experimental Set-up"]) --> |15 seconds before & after exposure through Microscope| B;
+B(["Capturing footage of Heart beats"]) --> C;
+C(["Video footage processing"]) --> |Compiling & Slowing down video| D;
+D(["Counting number of heart beats for each specimen"]) --> |Excel Database| E;
+E(["Compiling all data into Excel database"]) --> F;
+F(["Data & Statistical Analysis"])
+```
 
 
 
@@ -51,6 +66,15 @@ F --> G(["Final report"])
 - Acute toxicity tests (48-hour exposure)
 - Chronic toxicity tests (14-day exposure)
 - Heart rate comparison analysis before and after exposure   
+
+
+### Primary Tools
+- Experimental toxicity laboratory analysis
+- Video footage capture (20X Microscope & Huawei P20 Phone Video Camera)
+- RStudio (EDA, Statistical testing, Toxicity testing, Data Visualization)
+- Dai Vinci (Video footage compilation, editing & slowdown)
+- Excel (Database management & EDA)
+
 
 ### Tools & Software
 - Excel (Data management)
@@ -84,6 +108,23 @@ F --> G(["Final report"])
 
 ---
 
+## 🚧 Challenges
+
+- Unorthodox experimental conditions due to uncertainty and increased vigilance during COVID-19 pandemic
+- Investigation of Experimental issues related to unorthodox acute & chronic toxicity results 
+- Testing and evaluting experimental & statistical methods to resolve observed issues
+
+
+
+
+## 🎯 Key Skills Demonstrated
+
+- Critical Thinking & Problem solving to identify root cause of issues, and providing & testing solutions
+- Data gathering, EDA & Statistical investigation of experimental results
+- Scientific method to test hypothesis & evaluate results
+
+
+
 ## 📈 Summary of Key Findings
 
 *(Replace with your final findings once you add results.)*
@@ -96,3 +137,15 @@ F --> G(["Final report"])
 Detailed results can be found in the `/results` folder.
 
 ---
+
+
+
+### Questions or Feedback?
+I'm always interested in discussing data analytics, biostatistics and business intelligence solutions. Feel free to reach out if you have questions about this project or would like to collaborate!
+
+---
+
+⭐ **If you found this project helpful, please consider giving it a star!**
+
+*This project demonstrates practical application of business intelligence tools to solve real-world project management challenges. It showcases end-to-end development from problem identification to solution delivery.*
+
