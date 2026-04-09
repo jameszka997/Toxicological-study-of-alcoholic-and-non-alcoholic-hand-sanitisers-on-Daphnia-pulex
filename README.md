@@ -45,16 +45,62 @@ F --> G(["Final report"])
 
 
 
-**Heart Rate Analysis Workflow**
-```mermaid
-flowchart TD;
-A(["Experimental Set-up"]) --> |15 seconds before & after exposure through Microscope| B;
-B(["Capturing footage of Heart beats"]) --> C;
-C(["Video footage processing"]) --> |Compiling & Slowing down video| D;
-D(["Counting number of heart beats for each specimen"]) --> |Excel Database| E;
-E(["Compiling all data into Excel database"]) --> F;
-F(["Data & Statistical Analysis"])
+
+**Request Flowchart Graph Test**
+``` mermaid
+
+graph TB;
+
+subgraph MAIN[ ]
+direction TB
+A(["<b>Initial contact sent</b> <br> Lead Auditor contacts TP or RE with request"])
+B(["<b>Kind Reminder 1</b> <br> Friendly follow-up, confirm contact details are still valid"])
+C(["<b>Kind Reminder 2</b> <br> Second follow-up, re-attach relevant documents"])
+D(["<b>Kind Reminder 3 - escalation notice</b> <br> Warn that formal action follows at Week 8 <br> TP: CC internal account owner | RE: CC manager or department head"])
+E{"Response received?"}
+G(["<b>Formal warning - 2-month threshold</b> <br> Case flagged in the system for increased inactivity"])
+H{"Response received?"}
+J(["<b>Final reminder</b> <br> Last chance notice - cancellation at Week 12 <br> No further reminders sent after this stage"])
+K(["<b>Audit Cancellation - 3-month threshold</b> <br> Formal cancellation due to inactivity <br> Case history retained, linked to any future case"])
+end
+
+subgraph SIDE1[ ]
+direction TB
+F(["<b>Resume scheduling</b> <br> Notify copied stakeholders"])
+end
+
+subgraph SIDE2[ ]
+direction TB
+I(["<b>Resume scheduling</b> <br> Log stage, update stakeholders"])
+end
+
+A --> |<i>Week 0</i>| B
+B --> |<i>Week 2</i>| C
+C --> |<i>Week 4</i>| D
+D --> |<i>Week 6</i>| E
+E --> |<b>No</b>| G
+E --> |<b>Yes</b>| F
+G --> |<i>Week 8</i>| H
+H --> |<b>No</b>| J
+H --> |<b>Yes</b>| I
+J --> |<i>Week 10</i>| K
+
+style F fill:#E1F5EE,stroke:#0F6E56,color:#085041
+style I fill:#E1F5EE,stroke:#0F6E56,color:#085041
+style E fill:#FAECE7,stroke:#993C1D,color:#712B13
+style H fill:#FAECE7,stroke:#993C1D,color:#712B13
+style G fill:#FAECE7,stroke:#993C1D,color:#712B13
+style J fill:#FAECE7,stroke:#993C1D,color:#712B13
+style K fill:#F5C4B3,stroke:#D85A30,color:#712B13
+style MAIN fill:none,stroke:none
+style SIDE1 fill:none,stroke:none
+style SIDE2 fill:none,stroke:none
+
 ```
+
+
+
+
 
 
 
