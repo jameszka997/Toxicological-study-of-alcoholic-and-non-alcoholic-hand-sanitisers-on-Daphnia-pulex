@@ -47,6 +47,20 @@ F --> G(["Final report"])
 
 **Heart Rate Analysis Workflow**
 ```mermaid
+flowchart TD;
+A(["Experimental Set-up"]) --> |15 seconds before & after exposure through Microscope| B;
+B(["Capturing footage of Heart beats"]) --> C;
+C(["Video footage processing"]) --> |Compiling & Slowing down video| D;
+D(["Counting number of heart beats for each specimen"]) --> |Excel Database| E;
+E(["Compiling all data into Excel database"]) --> F;
+F(["Data & Statistical Analysis"])
+```
+
+
+
+
+**Heart Rate Analysis Workflow**
+```mermaid
 flowchart LR;
 A(["Experimental Set-up"]) --> |15 seconds before & after exposure through Microscope| B;
 B(["Capturing footage of Heart beats"]) --> C;
